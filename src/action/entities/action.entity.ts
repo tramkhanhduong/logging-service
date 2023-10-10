@@ -8,10 +8,10 @@ export class Action extends EntityHelper {
   id: number;
   
   @Column()
-  user_id: number;
+  userId: number;
 
   @Column()
-  action_type?: string | null;
+  actionType?: string | null;
 
   @Column({ type: 'timestamp' })
   timestamp: Date;

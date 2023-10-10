@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { SocketModule } from './socket/socket.module';
 import { ActionModule } from './action/action.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeOrmConfigService } from './database/typeorm-config.service';
@@ -20,7 +19,6 @@ import { SocketService } from './socket/socket.service';
         return new DataSource(options).initialize();
       },
     }),
-    SocketModule, 
     ActionModule, 
   ],
   controllers: [AppController],

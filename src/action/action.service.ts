@@ -18,8 +18,8 @@ export class ActionService {
     ): Promise<Action> {
 
         const action = new Action();
-        action.user_id = userId;
-        action.action_type = actionType;
+        action.userId = userId;
+        action.actionType = actionType;
         action.timestamp = new Date();
 
         const savedAction = await this.actionRepository.save(action);
